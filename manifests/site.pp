@@ -4,4 +4,5 @@ node default {
   file { '/tmp/hostname':
     content => "Hello, world!\n",
   }
+  include hello
 }
