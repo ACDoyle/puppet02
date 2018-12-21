@@ -1,9 +1,9 @@
 node default {
-  notify {'This is the development environment': }
+  #notify {'This is the development environment': }
 
-  file { '/tmp/hostname':
-    content => "Hello, world!\n",
-  }
+  #file { '/tmp/hostname':
+  #  content => "Hello, world!\n",
+  #}
   include hello
 
   include example
