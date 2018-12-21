@@ -5,6 +5,10 @@ node default {
   #  content => "Hello, world!\n",
   #}
   include hello
-
+  
   include example
+
+  $message = hiera('message','unknown')
+  notify {"Message is $message": }
+
 }
