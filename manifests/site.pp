@@ -5,4 +5,6 @@ node default {
     content => "Hello, world!\n",
   }
   include hello
+
+  include example
 }
