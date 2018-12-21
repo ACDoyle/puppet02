@@ -1,4 +1,11 @@
 class web {
-  notify {'Hello from web class': }
+  package {'httpd':
+    ensure => 'installed',
+  }
 
+  service {'httpd':
+    ensure  => true,
+    enable  => true,
+    require => Package['httpd'],
+  }
 }
