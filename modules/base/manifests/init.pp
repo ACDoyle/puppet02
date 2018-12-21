@@ -8,9 +8,7 @@ class base {
 
   package
   {
-    ['cron',
-    'locate',
-    'lsof',
+    ['lsof',
     'unzip',
     'elinks' ]:
     ensure => installed, 
