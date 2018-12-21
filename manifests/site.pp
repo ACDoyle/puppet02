@@ -1,3 +1,3 @@
 node default {
-  notify {'This is the production environment': }
+  notify {'This is the development environment': }
 }
