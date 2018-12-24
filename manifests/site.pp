@@ -4,11 +4,12 @@ node default {
   #file { '/tmp/hostname':
   #  content => "Hello, world!\n",
   #}
-  include hello
+#  include hello
   
-  include example
+#  include example
 
   $message = hiera('message','unknown')
   notify {"Message is $message": }
 
+  inlude roles::webserver
 }
