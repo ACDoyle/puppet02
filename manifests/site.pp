@@ -11,5 +11,5 @@ node default {
   $message = hiera('message','unknown')
   notify {"Message is $message": }
 
-  inlude roles::webserver
+  inlude profiles::base
 }
