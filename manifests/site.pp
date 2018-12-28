@@ -1,15 +1,14 @@
 node default {
-  #notify {'This is the development environment': }
+  notify {'This is the development environment': }
 
-  #file { '/tmp/hostname':
-  #  content => "Hello, world!\n",
-  #}
-#  include hello
+  file { '/tmp/hostname':
+    content => "Hello, world!\n",
+  }
+  include hello
   
-#  include example
+  include example
 
   $message = hiera('message','unknown')
   notify {"Message is $message": }
 
-  inlude profiles::base
 }
