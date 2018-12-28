@@ -7,5 +7,5 @@ node default {
   notify {"Message is $message": }
 
   $x = [ '1','2' ]
-  notify { "TEST ARRAY $x": }  
+  $x.each |String $value| notice("${value}")}
 }
