@@ -3,10 +3,10 @@ node default {
 
   
   
-  $message = hiera('message','unknown')
-  $message.each |String $test| {
-    notify {"Message is $test": }
-  }
+#  $message = hiera('message','unknown')
+#  $message.each |String $test| {
+#    notify {"Message is $test": }
+#  }
 
  # $x = [ '1','2' ]
  # $x.each |String $value| {
