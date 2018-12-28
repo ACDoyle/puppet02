@@ -4,7 +4,9 @@ node default {
   
   
   $message = hiera('message','unknown')
-  notify {"Message is $message": }
+  $message.each |String $test| {
+    notify {"Message is $test": }
+  }
 
  # $x = [ '1','2' ]
  # $x.each |String $value| {
