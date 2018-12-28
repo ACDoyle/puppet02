@@ -7,5 +7,7 @@ node default {
   notify {"Message is $message": }
 
   $x = [ '1','2' ]
-  $x.each |String $value| notify { "$value": }
+  $x.each |String $value| {
+    notify {"M is ${value}": }
+  }
 }
