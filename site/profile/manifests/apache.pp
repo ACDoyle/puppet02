@@ -6,7 +6,7 @@ class profile::apache {
   
   apache::vhost { '$domain_ssl':
     port     => '443',
-    docroot  => "/var/www/$domain_ssl",
+    docroot  => '/var/www/$domain_ssl',
     ssl      => true,
   }
 }
