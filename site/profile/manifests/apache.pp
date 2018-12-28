@@ -4,9 +4,11 @@ class profile::apache {
     default_confd_files =>false,
    }
   $domain = hiera('domain_ssl','unknown')
-  apache::vhost { $domain:
-    port     => '443',
-    docroot  => "/var/www/$domain",
-    ssl      => true,
+  $domain.each |String $binary| {
+    apache::vhost { $binary:
+      port     => '443',
+      docroot  => "/var/www/$binary",
+      ssl      => true,
+    }
   }
 }
