@@ -3,10 +3,12 @@ class profile::apache {
     default_mods        => false,
     default_confd_files =>false,
    }
-  
-  apache::vhost { '$domain_ssl':
+
+  $domain_ssl='secure-ssl.example.com'
+
+  apache::vhost { 'secure-ssl.example.com':
     port     => '443',
-    docroot  => '/var/www/$domain_ssl',
+    docroot  => "/var/www/$domain_ssl",
     ssl      => true,
   }
 }
