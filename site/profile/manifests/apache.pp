@@ -6,6 +6,7 @@ class profile::apache {
   service { $apache:
     enable => true,
     ensure => true,
+    require => Package["$apache"],
   }
   package { $apache:
     ensure => 'installed',
