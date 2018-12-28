@@ -4,8 +4,6 @@ class profile::apache {
     default_confd_files =>false,
    }
 
-  $domain_ssl='secure-ssl.example.com'
-
   apache::vhost { $domain_ssl:
     port     => '443',
     docroot  => "/var/www/$domain_ssl",
