@@ -6,8 +6,8 @@ node default {
   $message = hiera('message','unknown')
   notify {"Message is $message": }
 
-  $x = [ '1','2' ]
-  $x.each |String $value| {
-    notify {"M is ${value}": }
-  }
+ # $x = [ '1','2' ]
+ # $x.each |String $value| {
+ #   notify {"M is ${value}": }
+ # }
 }
