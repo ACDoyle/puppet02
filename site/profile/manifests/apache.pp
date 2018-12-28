@@ -4,7 +4,7 @@ class profile::apache {
     default_confd_files =>false,
    }
   $domain = hiera('domain_ssl','unknown')
-  notify {"domain is ....": } ->
+  notify {"$domain is ....": } ->
   apache::vhost { 'secure-ssl.example.com':
     port     => '443',
     docroot  => "/var/www/secure-ssl.example.com",
