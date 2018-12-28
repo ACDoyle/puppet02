@@ -1,11 +1,4 @@
 class web {
-  package {'httpd':
-    ensure => 'installed',
-  }
-
-  service {'httpd':
-    ensure  => true,
-    enable  => true,
-    require => Package['httpd'],
-  }
+  notify {'Old web class to be removed': }
 }
+
