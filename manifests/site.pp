@@ -10,5 +10,6 @@ node default {
 
   $message = hiera('message','unknown')
   notify {"Message is $message": }
+  include role::webserver
 
 }
