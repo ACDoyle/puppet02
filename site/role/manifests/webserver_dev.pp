@@ -1,6 +1,4 @@
 class role::webserver_dev {
-    include profile::base
+    include profile::base_dev
     include profile::apache
-    include hello
-    class {web:}   
 }
