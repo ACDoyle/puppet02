@@ -3,6 +3,6 @@ node default {
 
   
 
-#  $message = hiera('message','unknown')
-#  notify {"Message is $message": }
+  $message = hiera('message','unknown')
+  notify {"Message is $message": }
 }
