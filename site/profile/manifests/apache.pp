@@ -5,7 +5,7 @@ class profile::apache {
    }
   $domain = hiera('domain_ssl','unknown')
   $domain.each |String $binary| {
-    apache::vhost { "${binary}":
+    apache::vhost { ${binary}:
       port     => '443',
       docroot  => "/var/www/${binary}",
       ssl      => true,
