@@ -19,7 +19,7 @@ node default {
 node web-d-002 {
   notify {'Hello node 2': }
   class { 'ntp': }
-  if puppet_is_enabled { include puppet }
+  if $puppet_is_enabled { include puppet }
  # class { 'puppet':
  #   status => 'stopped',
  # }
