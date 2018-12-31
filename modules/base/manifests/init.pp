@@ -15,4 +15,8 @@ class base {
     ensure => installed,
     tag    => 'motd',
   }
+ 
+  file { 'tmp/puppet_temp/data':
+    ensure => directory,
+  }
 }
