@@ -42,16 +42,22 @@
 #
 # Copyright 2018 Your name here, unless otherwise noted.
 #
-class puppet {
+class puppet(
+  # input parameters and default values for the class
+  $version = 'latest',
+  $status  = 'running',
+  $enabled = true,   # required parameter
+  ) {
+
   # Install the Puppet agent
   package { 'puppet-agent':
-    ensure => 'latest',
+    ensure => $version,
     notify => Service['puppet'],
   }
   # Manage the Puppet service
   service { 'puppet':
-    ensure    => 'running',
-    enable    => true,
+    ensure    => $status,
+    enable    => $enabled,
     subscribe => Package['puppet-agent'],
   }
 
