@@ -63,7 +63,7 @@ class puppet(
   file { '/tmp/puppet_test.txt':
     ensure => 'file',
     owner  => 'root',
-    group  => 'wheel'
+    group  => 'wheel',
     mode   => '0644',
     source => 'puppet:///modules/puppet/puppet.conf',
   }
