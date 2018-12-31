@@ -22,5 +22,6 @@ node web-d-002 {
  # include puppet
   class { 'puppet':
     status => 'stopped',
+    is_enabled => false,
   }
 }
