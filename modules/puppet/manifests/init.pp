@@ -55,7 +55,7 @@ class puppet(
   $certname         = $::fqdn,
   ) {
 
-  notify {"From class puppet $is_enabled value" }
+  notify {"From class puppet $is_enabled value" : }
   # Install the Puppet agent
   package { 'puppet-agent':
     ensure => $version,
