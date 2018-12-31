@@ -19,6 +19,6 @@ node default {
 node web-d-002 {
   notify {'Hello node 2': }
   class { 'ntp':
-    servers => [ 'puppet-master ],
+    servers => [ 'puppet-master' ],
   }
 }
