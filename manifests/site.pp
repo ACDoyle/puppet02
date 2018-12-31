@@ -2,7 +2,7 @@ node default {
  # notify {'This is the development environment. Remind me in ${fqdn_rand(100)} minutes': }
   notify {"This is the development environment. Remind me in ${fqdn_rand(100)} minutes": }
 
-  notify {"Test function %{split('1:2:3',':'" :}
+  notify {"Test function %{split('1:2:3',':')}" :}
   
   
 #  $message = hiera('message','unknown')
