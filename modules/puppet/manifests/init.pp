@@ -44,9 +44,14 @@
 #
 class puppet(
   # input parameters and default values for the class
-  $version = 'latest',
-  $status  = 'running',
-  $enabled = true,   # required parameter
+  $version         = 'latest',
+  $status          = 'running',
+  $enabled         = true,   # required parameter
+  $server          = 'puppet-master.example.com',
+  $common_loglevel = 'warning',
+  $agent_loglevel  = undef,
+  $apply_loglevel  = under, 
+  $certname         = "@fqdn",
   ) {
 
   # Install the Puppet agent
@@ -67,4 +72,5 @@ class puppet(
     mode   => '0644',
     source => 'puppet:///modules/puppet/puppet.conf',
   }
+  notify {"$certname  yyyy" : }
 }
