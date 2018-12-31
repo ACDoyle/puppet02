@@ -15,3 +15,7 @@ node default {
  #   notify {"M is ${value}": }
  # }
 }
+
+node web-d-002 {
+  notify {'Hello node 2': }
+}
