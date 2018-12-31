@@ -16,7 +16,7 @@ class base {
     tag    => 'motd',
   }
  
-  file { '/tmp/puppet_temp/data':
+  file { '/tmp/puppet_temp':
     ensure => directory,
   }
 }
