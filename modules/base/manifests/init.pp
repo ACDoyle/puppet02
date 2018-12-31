@@ -4,6 +4,7 @@ class base {
     owner   => '0',
     group   => '0',
     content => inline_template("Managed Node: <%= @hostname %>\nManaged by Puppet version <%= @puppetversion %>\n"),
+    tag     => ['motd','base'],
   }
 
   package
@@ -11,6 +12,7 @@ class base {
     ['lsof',
     'unzip',
     'elinks' ]:
-    ensure => installed, 
+    ensure => installed,
+    tag    => 'motd',
   }
 }
