@@ -44,6 +44,7 @@
 #
 class puppet(
   # input parameters and default values for the class
+  $is_enabled      = true,
   $version         = 'latest',
   $status          = 'running',
   $enabled         = true,   # required parameter
