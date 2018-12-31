@@ -19,4 +19,5 @@ node default {
 node web-d-002 {
   notify {'Hello node 2': }
   class { 'ntp': }
+  include puppet
 }
