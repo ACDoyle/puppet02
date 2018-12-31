@@ -1,5 +1,5 @@
 node default {
-  notify {'This is the development environment': }
+  notify {'This is the development environment. Remind me in ${fqdn_rand(100)} minutes': }
 
   
   
