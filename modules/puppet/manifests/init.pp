@@ -56,29 +56,32 @@ class puppet(
   ) {
 
   notify {"From class puppet $is_enabled value" : }
-  # Install the Puppet agent
-  package { 'puppet-agent':
-    ensure => $version,
-    notify => Service['puppet'],
-  }
-  # Manage the Puppet service
-  service { 'puppet':
-    ensure    => $status,
-    enable    => $enabled,
-    subscribe => Package['puppet-agent'],
-  }
-  file { '/tmp/puppet_test.txt':
-    ensure => 'file',
-    owner  => 'root',
-    group  => 'wheel',
-    mode   => '0644',
-    source => 'puppet:///modules/puppet/puppet.conf',
-  }
-  file { '/etc/puppetlabs/puppet/puppet.conf':
-    ensure  => 'file',
-    owner   => 'root',
-    group   => 'wheel',
-    mode    => '0644',
-    content => template('puppet/puppet.conf.erb'),
+  if $is_enabled {
+
+    # Install the Puppet agent
+    package { 'puppet-agent':
+      ensure => $version,
+      notify => Service['puppet'],
+    }
+    # Manage the Puppet service
+    service { 'puppet':
+      ensure    => $status,
+      enable    => $enabled,
+      subscribe => Package['puppet-agent'],
+    }
+    file { '/tmp/puppet_test.txt':
+      ensure => 'file',
+      owner  => 'root',
+      group  => 'wheel',
+      mode   => '0644',
+      source => 'puppet:///modules/puppet/puppet.conf',
+    }
+    file { '/etc/puppetlabs/puppet/puppet.conf':
+      ensure  => 'file',
+      owner   => 'root',
+      group   => 'wheel',
+      mode    => '0644',
+      content => template('puppet/puppet.conf.erb'),
+    }
   }
 }
