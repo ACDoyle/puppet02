@@ -72,5 +72,11 @@ class puppet(
     mode   => '0644',
     source => 'puppet:///modules/puppet/puppet.conf',
   }
-  notify {"$certname  yyyy" : }
+  file { '/etc/puppetlabs/puppet/puppet.conf':
+    ensure  => 'file',
+    owner   => 'root',
+    group   => 'wheel',
+    mode    => '0644',
+    content => template('puppet/puppet.conf.erb'),
+  }
 }
