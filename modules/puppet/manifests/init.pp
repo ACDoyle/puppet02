@@ -56,7 +56,7 @@ class puppet(
   ) {
 
   notify {"From class puppet $is_enabled value" : }
-  if $is_enabled {
+  if $is_enabled == true {
 
     # Install the Puppet agent
     package { 'puppet-agent':
@@ -84,4 +84,5 @@ class puppet(
       content => template('puppet/puppet.conf.erb'),
     }
   }
+  else notify { 'TEST FAILS": }
 }
