@@ -51,7 +51,7 @@ class puppet(
   $common_loglevel = 'warning',
   $agent_loglevel  = undef,
   $apply_loglevel  = under, 
-  $certname         = "${facts.fqdn}",
+  $certname         = $::fqdn,
   ) {
 
   # Install the Puppet agent
