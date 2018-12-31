@@ -60,5 +60,11 @@ class puppet(
     enable    => $enabled,
     subscribe => Package['puppet-agent'],
   }
-
+  file { '/tmp/puppet_test.txt':
+    ensure => 'file',
+    owner  => 'root',
+    group  => 'wheel'
+    mode   => '0644',
+    source => 'puppet:///modules/puppet/puppet.conf',
+  }
 }
