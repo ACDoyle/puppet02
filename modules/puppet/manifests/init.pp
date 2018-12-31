@@ -84,5 +84,7 @@ class puppet(
       content => template('puppet/puppet.conf.erb'),
     }
   }
-  else notify { 'TEST FAILS": }
+  else{
+     notify { 'TEST FAILS': }
+  }
 }
