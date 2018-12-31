@@ -23,4 +23,5 @@ node web-d-002 {
   class { 'puppet':
     status => 'stopped',
   }
+}
 
