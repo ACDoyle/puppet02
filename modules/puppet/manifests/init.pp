@@ -55,7 +55,6 @@ class puppet(
   $certname         = $::fqdn,
   ) {
 
-  if $is_enabled == true {
 
     notify {"From class puppet $is_enabled value" : }
     # Install the Puppet agent
@@ -83,8 +82,4 @@ class puppet(
       mode    => '0644',
       content => template('puppet/puppet.conf.erb'),
     }
-  }
-  else{
-     notify { 'TEST FAILS': }
-  }
 }
