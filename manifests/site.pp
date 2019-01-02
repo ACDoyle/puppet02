@@ -19,7 +19,8 @@ node default {
 node web-d-002 {
   notify {'Hello node 2': }
   class { 'ntp': }
-  if $puppet_is_enabled { include puppet }
+  $mess = hiera('puppet_is_enabled',true)
+  if $mess { include puppet }
  # class { 'puppet':
  #   status => 'stopped',
  # }
