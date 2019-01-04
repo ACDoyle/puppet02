@@ -20,6 +20,8 @@ node web-d-002 {
   notify {'Hello node 2': }
   class { 'ntp': }
   $mess = hiera('puppet_is_enabled',true)
+  $xx = hiera('ansible_rsa_priv_key',undef)
+  notify {"Value is | $xx :}
   if $mess { include puppet }
  # class { 'puppet':
  #   status => 'stopped',
