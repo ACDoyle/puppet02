@@ -19,4 +19,16 @@ class base {
   file { '/tmp/puppet_temp':
     ensure => directory,
   }
+  file_line { 'add_line1':
+    ensure  => present,
+    line    => '[test1]',
+    path    => '/etc/motd',
+    require => File['/etc/motd'],
+  } ->
+  file_line { 'add-line2':
+    ensure  => present,
+    line    => 'maxKBps = 2048',
+    match   => '^maxKBps.*$',
+    path    => '/etc/motd',
+  }
 }
