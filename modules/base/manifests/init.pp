@@ -21,7 +21,7 @@ class base {
   }
   file_line { 'add_line1':
     ensure  => present,
-    line    => '[test1]',
+    line    => '[main]',
     path    => '/etc/motd',
     require => File['/etc/motd'],
   } ->
