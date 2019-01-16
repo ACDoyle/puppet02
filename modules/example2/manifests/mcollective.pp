@@ -7,7 +7,7 @@ class example2::mcollective {
   }
   service { 'mcollective':
     ensure  => true,
-    enabele => true,
+    enable  => true,
     require => [Package['mcollective'],File['mcollective_server_config']],
   }
   file { 'mcollective_server_config':
