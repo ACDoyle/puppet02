@@ -1,5 +1,11 @@
 class example2 {
-
+  file { '/etc/mcollective/ssl/':
+    ensure  => 'directory',
+    owner   => '0',
+    group   => '0',
+    mode    => '0640',
+    recurse => true,
+  }
   file {'mcollective_server_cert':
     path   => '/etc/mcollective/ssl/mcollective_public.pem',
     owner  => '0',
