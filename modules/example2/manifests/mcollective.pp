@@ -3,7 +3,7 @@ class example2::mcollective {
   $mcollective_server = 'puppet-master.example.com'
 
   package { 'mcollective':
-    ensure => true,
+    ensure => latest,
   }
   service { 'mcollective':
     ensure  => true,
