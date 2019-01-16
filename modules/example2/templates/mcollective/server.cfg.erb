@@ -1,4 +1,5 @@
 main_collective = mcollective
+$mcollective_server = puppet-master.example.com
 collectives = mcollective
 libdir = /usr/libexec/mcollective
 daemonize = 1
@@ -15,8 +16,7 @@ max_log_size = 2097152
 # activemq
 connector = activemq
 plugin.activemq.pool.size = 1
-#plugin.activemq.pool.1.host = <%= mcollective_server %>
-plugin.activemq.pool.1.host = puppet-master.example.com
+plugin.activemq.pool.1.host = <%= mcollective_server %>
 plugin.activemq.pool.1.port = 61614
 plugin.activemq.pool.1.user = mcollective
 plugin.activemq.pool.1.password = PacktPubSecret
