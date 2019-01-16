@@ -15,7 +15,7 @@ class example2::mcollective {
     owner   => '0',
     group   => '0',
     mode    => '0640',
-    content => template(example2/mcollective/server.cfg.erb'),
+    content => template('example2/mcollective/server.cfg.erb'),
     require => Package['mcollective'],
     notify  => Service['mcollective'],
   }
