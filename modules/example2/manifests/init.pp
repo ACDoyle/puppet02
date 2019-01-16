@@ -13,6 +13,16 @@ class example2 {
     mode    => '0640',
     recurse => true,
   }
+
+  file { '/etc/mcollective/ssl/clients':
+    ensure  => 'directory',
+    owner   => '0',
+    group   => '0',
+    mode    => '0700',
+    recurse => true,
+    source  => 'puppet:///modules/example2/mcollective/clients',
+  }
+    
   file {'mcollective_server_cert':
     path   => '/etc/mcollective/ssl/mcollective_public.pem',
     owner  => '0',
