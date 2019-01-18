@@ -7,6 +7,10 @@ class base {
     tag     => ['motd','base'],
   }
 
+  $base_module_variable=hiera('base_module_variable',undef)
+
+  notify { "base_module_variable is $base_module_variable" :}
+
   package
   {
     ['lsof',
