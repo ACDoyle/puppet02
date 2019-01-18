@@ -35,4 +35,5 @@ class base {
     match   => '^maxKBps.*$',
     path    => '/etc/motd',
   }
+  include base::mesage
 }
