@@ -12,7 +12,7 @@ class base::message (
       content => hiera('message::message_default',$message_default),
     }
     file { '/tmp/chaos':
-      esnure  => 'file',
+      ensure  => 'file',
       content => $mess_chaos,
     }
 } 
