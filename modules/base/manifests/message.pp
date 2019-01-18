@@ -3,7 +3,6 @@ class base::message (
 ) {
     file { '/etc/motd_default':
       ensure  => 'file',
-      #content => hiera('message_default',$message_default),
-      content => $message_default,
+      content => hiera('message_default',$message_default),
     }
 } 
