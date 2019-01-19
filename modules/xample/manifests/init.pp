@@ -7,4 +7,6 @@ class xample {
        fail("Your facts is not supportes")
      }
    }
+  include xample::test
+  
 }
