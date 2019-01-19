@@ -3,4 +3,5 @@ class xample::test {
   file { /tmp/xample.txt':
     content => file('xample/xample.txt'),
     notify  => Class['xample::service'],
+  }
 }
