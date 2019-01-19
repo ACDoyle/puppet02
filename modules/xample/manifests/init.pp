@@ -8,5 +8,6 @@ class xample {
      }
    }
   include xample::test
+  include xample::service
   
 }
