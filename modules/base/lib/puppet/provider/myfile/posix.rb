@@ -1,4 +1,4 @@
-Puppet::Type.type(:file).provide(:posix) do
+Puppet::Type.type(:myfile).provide(:posix) do
   desc "Normal Unix-like POSIX support for file management."
 
   def create
