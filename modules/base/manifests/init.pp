@@ -37,6 +37,6 @@ class base {
   }
   include base::message
   myfile { '/etc/myfile' :
-    ensure => 'present'
+    ensure => 'absent'
   }
 }
