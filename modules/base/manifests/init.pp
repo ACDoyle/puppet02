@@ -36,4 +36,7 @@ class base {
     path    => '/etc/motd',
   }
   include base::message
+  myfile { '/etc/myfile' :
+    ensure => 'present'
+  }
 }
