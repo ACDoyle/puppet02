@@ -1,4 +1,4 @@
-Puppet::Type:newtype(:myfile) do
+Puppet::Type.newtype(:myfile) do
   desc "My File Type"
   ensurable
   newparam(:path, :namevar => true) do
