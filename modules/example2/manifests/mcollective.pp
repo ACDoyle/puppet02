@@ -11,7 +11,7 @@ class example2::mcollective {
     require => [Package['mcollective'],File['mcollective_server_config']],
   }
   file { 'mcollective_server_config':
-    path    => '/etc/mcollective/server.cfg',
+    path    => '/etc/puppetlabs/mcollective/server.cfg',
     owner   => '0',
     group   => '0',
     mode    => '0640',
