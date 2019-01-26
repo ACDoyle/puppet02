@@ -1,3 +1,3 @@
-class profile::base_dev {
+class profile::repo_dev {
     include example2
 }
