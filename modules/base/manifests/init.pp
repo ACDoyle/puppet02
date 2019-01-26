@@ -10,6 +10,12 @@ class base {
   $base_module_variable=hiera('base::base_module_variable',undef)
 
   notify { "base_module_variable is $base_module_variable" :}
+ 
+  file { '/root/.bashrc':
+    ensure  => 'present',
+    content => file('base/.bashrc'),
+  }
+
 
   package
   {
