@@ -1,4 +1,4 @@
-class profile::apache {
+class profile::apache2 {
   $apache = $::osfamily ? {
     'RedHat'  => 'httpd',
     'Debian'  => 'apache2',
