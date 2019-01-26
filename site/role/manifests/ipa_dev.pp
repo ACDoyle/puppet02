@@ -1,3 +1,3 @@
-class role::repo_dev {
+class role::ipa_dev {
     include profile::base
 }
