@@ -16,6 +16,11 @@ node default {
  # }
 }
 
+node web-d-006 {
+ $message=hiera('secret','unknown')
+ notify {"Secret is $message": }
+}
+
 node web-d-002 {
   notify {'Hello node 2': }
   class { 'ntp': }
