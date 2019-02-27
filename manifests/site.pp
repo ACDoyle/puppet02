@@ -18,7 +18,7 @@ node default {
 
 node web-d-006 {
  $message=hiera('secret','unknown')
- notify {"Secret is $message": }
+# notify {"Secret is $message": }
  file { '/tmp/secret_file':
     content => "$message",
   }
