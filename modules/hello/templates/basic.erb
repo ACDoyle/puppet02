@@ -1,4 +1,7 @@
 
 $mail_info = hiera('mail_server', undef)
+if ("${mail_info} == 'undef'){
+ notify {"TESTixxxxxxxxxxxxxxxxxxxxxxxxxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:" }
+}
 x=$mail_info
 myhostname = <%= @fqdn %>
