@@ -1,6 +1,10 @@
 
 
 $mail_info = hiera('mail_server', undef)
+
+domain <%= @mail_server %>
+X <%= @mail_info %>
+
 if ("${mail_info} == 'TEST_MAIL01'){
  notify {"TESTixxxxxxxxxxxxxxxxxxxxxxxxxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:" }
 }
