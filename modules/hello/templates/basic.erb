@@ -1,4 +1,4 @@
 
-mail_info = hiera('mail_server', undef)
+$mail_info = hiera('mail_server', undef)
 x=$mail_info
 myhostname = <%= @fqdn %>
