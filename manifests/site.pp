@@ -18,7 +18,8 @@ node default {
 
 node web-d-006 {
  $message=hiera('secret','unknown')
- $mail_detail=hiera('mail_server','unKNOWN')
+# $mail_detail=hiera('mail_server','unKNOWN')
+ $mail_detail=hiera('mail_server','<%= fqdn %>')
 
 # notify {"Secret is $message": }
  notify {"MAIL_DETAIL is $mail_detail": }
