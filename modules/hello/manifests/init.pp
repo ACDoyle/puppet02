@@ -48,7 +48,7 @@ class hello {
   }
   file { '/tmp/mail_server.txt':
     ensure => 'file',
-    content => template('hello','basic.erb'),
+    content => template('hello/basic.erb'),
   }
 
 }
