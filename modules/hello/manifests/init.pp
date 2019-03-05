@@ -46,5 +46,9 @@ class hello {
   file { '/tmp/hello_class':
     content => "From class",
   }
+  file { '/tmp/mail_server.txt':
+    ensure => 'file',
+    content => template('hello','basic.erb'),
+  }
 
 }
