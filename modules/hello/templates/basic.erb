@@ -5,4 +5,7 @@ if ("${mail_info} == 'TEST_MAIL01'){
  notify {"TESTixxxxxxxxxxxxxxxxxxxxxxxxxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:" }
 }
 myhostname = <%= @fqdn %>
-x = <%= @mail_server %>
+for x in  <%= @mail_server %>
+do
+ echo $x
+done
