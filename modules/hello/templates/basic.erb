@@ -1,4 +1,6 @@
 
+<%= scope.function_hiera(["hiera::mail_server"]) %>
+
 $mail_info = hiera('mail_server', undef)
 if ("${mail_info} == 'TEST_MAIL01'){
  notify {"TESTixxxxxxxxxxxxxxxxxxxxxxxxxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:" }
