@@ -43,11 +43,13 @@
 # Copyright 2018 Your name here, unless otherwise noted.
 #
 class hello {
-  $mail_info=hiera('mail_server','undef')
+
+  $mail_info=hiera('mail_server',undef)
 
   file { '/tmp/hello_class':
     content => "From class",
   }
+
   file { '/tmp/mail_server.txt':
     ensure => 'file',
     content => template('hello/basic.erb'),
