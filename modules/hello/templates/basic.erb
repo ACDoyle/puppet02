@@ -1,4 +1,7 @@
 
-
+<% if @mail_info %>
 passwd: <%= @mail_info %>
+<% else %>
+passwd: <%= fqdn %>
+
 myhostname = <%= @fqdn %>
