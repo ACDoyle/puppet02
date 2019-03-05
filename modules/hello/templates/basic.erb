@@ -1,15 +1,6 @@
 
 
-$mail_info = hiera('mail_server', undef)
 
-domain <%= @mail_server %>
-X <%= @mail_info %>
+<%= @mail_server %>
 
-if ("${mail_info} == 'TEST_MAIL01'){
- notify {"TESTixxxxxxxxxxxxxxxxxxxxxxxxxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:" }
-}
 myhostname = <%= @fqdn %>
-for x in  <%= @mail_server %>
-do
- echo $x
-done
