@@ -3,5 +3,6 @@ $mail_info = hiera('mail_server', undef)
 if ("${mail_info} == 'TEST_MAIL01'){
  notify {"TESTixxxxxxxxxxxxxxxxxxxxxxxxxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:" }
 }
-x=$mail_info
+x= <%= $mail_info %>
+x= <%= @mail_info %>
 myhostname = <%= @fqdn %>
