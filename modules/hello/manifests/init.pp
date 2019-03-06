@@ -54,5 +54,6 @@ class hello {
     ensure => 'file',
     content => template('hello/basic.erb'),
   }
+  notify { "FQDN= ${::fqdn} :" }
 
 }
