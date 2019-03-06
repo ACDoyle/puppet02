@@ -58,7 +58,6 @@ class hello {
   notify { "FQDN= ${::fqdn}": }
   }
   $XX="$fqdn"
-  notify { "XX = $XX ": }  
 
 
 }
