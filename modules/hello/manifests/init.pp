@@ -57,7 +57,8 @@ class hello {
   if $fqdn == 'web-d-006.example.com'{
   notify { "FQDN= ${::fqdn}": }
   }
-  
+  $XX="$fqdn"
+  notify { "XX = $XX ": }  
 
 
 }
