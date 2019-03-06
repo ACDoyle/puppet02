@@ -55,5 +55,7 @@ class hello {
     content => template('hello/basic.erb'),
   }
   notify { "FQDN= ${::fqdn}": }
+  $X1="${::fqdn}"
+
 
 }
