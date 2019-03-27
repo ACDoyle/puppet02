@@ -54,10 +54,5 @@ class hello {
     ensure => 'file',
     content => template('hello/basic.erb'),
   }
-  if $fqdn == 'web-d-006.example.com'{
-  notify { "FQDN= ${::fqdn}": }
-  }
-  $XX="$fqdn"
-
 
 }
